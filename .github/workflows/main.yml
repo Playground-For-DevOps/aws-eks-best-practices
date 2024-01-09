@@ -33,6 +33,8 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material mkdocs-static-i18n==1.2.0
       - run: mkdocs gh-deploy --force
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
 #jobs:
 #  build:
